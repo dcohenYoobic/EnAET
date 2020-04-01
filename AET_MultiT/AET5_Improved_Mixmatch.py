@@ -477,6 +477,9 @@ def prepare_Dataloader(data,params,num_classes):
     elif params['dataset']=='SVHN':#method verified on the cifar10
         TRAIN_MEAN = (0.4376821046090723,0.4437697045639686,0.4728044222297267)#calculate by myself
         TRAIN_STD = (0.19803012447157134,0.20101562471828877,0.19703614172172396)
+    else:
+        TRAIN_MEAN = (0.4376821046090723,0.4437697045639686,0.4728044222297267)#calculate by myself
+        TRAIN_STD = (0.19803012447157134,0.20101562471828877,0.19703614172172396)
     #dataset=torchvision.dataset.cifar10(params['F'], train=True, download=True)
     from ops.Transform_ops import RandomFlip,RandomPadandCrop
     transform_train = transforms.Compose([
