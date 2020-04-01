@@ -30,8 +30,10 @@ if __name__ == "__main__":
             data = STL10(data_path)
         elif dataset_name=='SVHNextra':
             from Data_Processing.Download_SVHN import SVHN
-
             data = SVHN(data_path)
+        elif dataset_name == "sanofi":
+            from Data_Processing.Download_sanofi import SANOFI
+            data = SANOFI(data_path)
         os.environ['CUDA_VISIBLE_DEVICES'] = params['choose']
         import torch
 
