@@ -51,7 +51,7 @@ class SANOFI(object):
 
     def Process_Dataset(self, train_path, split):
         mapping_labels = {"box":-1}
-        img_paths = glob.glob("../catalog_{}_new/*/*.jpg".format(split))
+        img_paths = glob.glob("catalog_{}_new/*/*.jpg".format(split))
         for i,img_path in enumerate(img_paths):
             img = Image.open(img_path)
             dir_path = os.path.dirname(img_path)
