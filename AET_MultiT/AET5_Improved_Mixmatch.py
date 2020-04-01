@@ -91,6 +91,8 @@ def Generate_Mixmatch5AET_Improved_Model(data,params):
         num_classes=10
     elif dataset_name=='SVHNextra':
         num_classes=10
+    elif dataset_name=='sanofi':
+        num_classes = 14
     if dataset_name=='SVHNextra':#we don't have time to run this in the end
         train_dataloader, unlabel_dataloader, testloader = prepare_SVHN_extra_Dataloader(data, params, num_classes)
     elif dataset_name!='STL10':
